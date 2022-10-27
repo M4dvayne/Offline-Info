@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Offline Info
 //
 //  Created by Вячеслав Кремнев on 20.10.2022.
@@ -7,18 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    private let outletHeightValue: CGFloat = 10
     
     //MARK: Phone Codes Button
     
-   private let phoneCodesButton: UIButton = {
+   private lazy var phoneCodesButton: UIButton = {
        let phoneCodesButton = UIButton()
         phoneCodesButton.backgroundColor = .darkGray
         phoneCodesButton.setTitle("Phone Codes", for: .normal)
         phoneCodesButton.titleLabel?.font = UIFont(name: "Optima", size: 26)
-       phoneCodesButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        phoneCodesButton.titleLabel?.adjustsFontSizeToFitWidth = true
         phoneCodesButton.layer.opacity = 0.9
         phoneCodesButton.layer.cornerRadius = 15
+       
+       phoneCodesButton.addTarget(self, action: #selector(showPhoneCodes), for: .touchUpInside)
         
         return phoneCodesButton
     }()
@@ -113,51 +117,51 @@ class ViewController: UIViewController {
     private func setPhoneCodesButtonConstraints() {
         phoneCodesButton.translatesAutoresizingMaskIntoConstraints = false
         phoneCodesButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        phoneCodesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        phoneCodesButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        phoneCodesButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        phoneCodesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        phoneCodesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        phoneCodesButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
     
     private func setColorCodesButtonConstraints() {
         colorCodesButton.translatesAutoresizingMaskIntoConstraints = false
-        colorCodesButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        colorCodesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        colorCodesButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        colorCodesButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        colorCodesButton.topAnchor.constraint(equalTo: phoneCodesButton.bottomAnchor, constant: 20).isActive = true
+        colorCodesButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        colorCodesButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        colorCodesButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
-    
+
     private func setEmergencyNumbersButtonConstraints() {
         emergencyNumbersButton.translatesAutoresizingMaskIntoConstraints = false
-        emergencyNumbersButton.topAnchor.constraint(equalTo: phoneCodesButton.bottomAnchor, constant: 20).isActive = true
-        emergencyNumbersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        emergencyNumbersButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        emergencyNumbersButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        emergencyNumbersButton.topAnchor.constraint(equalTo: colorCodesButton.bottomAnchor, constant: 20).isActive = true
+        emergencyNumbersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        emergencyNumbersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        emergencyNumbersButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
-    
+
     private func setCountryFlagsButtonConstraints() {
         countryFlagsButton.translatesAutoresizingMaskIntoConstraints = false
-        countryFlagsButton.topAnchor.constraint(equalTo: colorCodesButton.bottomAnchor, constant: 20).isActive = true
-        countryFlagsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        countryFlagsButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        countryFlagsButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        countryFlagsButton.topAnchor.constraint(equalTo: emergencyNumbersButton.bottomAnchor, constant: 20).isActive = true
+        countryFlagsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        countryFlagsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        countryFlagsButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
-    
+
     private func setAbbreviationsButtonConstraints() {
         abbreviationsButton.translatesAutoresizingMaskIntoConstraints = false
-        abbreviationsButton.topAnchor.constraint(equalTo: emergencyNumbersButton.bottomAnchor, constant: 20).isActive = true
-        abbreviationsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        abbreviationsButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        abbreviationsButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        abbreviationsButton.topAnchor.constraint(equalTo: countryFlagsButton.bottomAnchor, constant: 20).isActive = true
+        abbreviationsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        abbreviationsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        abbreviationsButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
-    
+
     private func setTextToCodeButtonConstraints() {
         textToCodeButton.translatesAutoresizingMaskIntoConstraints = false
-        textToCodeButton.topAnchor.constraint(equalTo: countryFlagsButton.bottomAnchor, constant: 20).isActive = true
-        textToCodeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        textToCodeButton.widthAnchor.constraint(equalToConstant: view.frame.width / 2 - 40).isActive = true
-        textToCodeButton.heightAnchor.constraint(equalToConstant: view.frame.height / 4 - 10).isActive = true
+        textToCodeButton.topAnchor.constraint(equalTo: abbreviationsButton.bottomAnchor, constant: 20).isActive = true
+        textToCodeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        textToCodeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        textToCodeButton.heightAnchor.constraint(equalToConstant: view.frame.height / outletHeightValue).isActive = true
     }
-    
+
     private func setConstraints() {
         setPhoneCodesButtonConstraints()
         setColorCodesButtonConstraints()
@@ -175,6 +179,14 @@ class ViewController: UIViewController {
         view.addSubview(countryFlagsButton)
         view.addSubview(abbreviationsButton)
         view.addSubview(textToCodeButton)
+    }
+    
+    
+    //MARK: Show Phone Codes ViewController
+    
+    @objc private func showPhoneCodes() {
+        let phoneViewController = PhoneCodesViewController()
+        self.navigationController?.pushViewController(phoneViewController, animated: true)
     }
     
 }

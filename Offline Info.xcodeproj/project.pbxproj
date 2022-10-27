@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		233AE5CB2901ED040049C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5CA2901ED040049C031 /* AppDelegate.swift */; };
 		233AE5CD2901ED040049C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5CC2901ED040049C031 /* SceneDelegate.swift */; };
-		233AE5CF2901ED040049C031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5CE2901ED040049C031 /* ViewController.swift */; };
+		233AE5CF2901ED040049C031 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5CE2901ED040049C031 /* MainViewController.swift */; };
 		233AE5D42901ED0C0049C031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233AE5D32901ED0C0049C031 /* Assets.xcassets */; };
 		233AE5D72901ED0C0049C031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233AE5D52901ED0C0049C031 /* LaunchScreen.storyboard */; };
 		233AE5E22901ED0C0049C031 /* Offline_InfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5E12901ED0C0049C031 /* Offline_InfoTests.swift */; };
 		233AE5EC2901ED0C0049C031 /* Offline_InfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5EB2901ED0C0049C031 /* Offline_InfoUITests.swift */; };
 		233AE5EE2901ED0C0049C031 /* Offline_InfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5ED2901ED0C0049C031 /* Offline_InfoUITestsLaunchTests.swift */; };
+		233AE5FF2904B35F0049C031 /* PhoneCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE5FE2904B35F0049C031 /* PhoneCodesViewController.swift */; };
+		233AE6022904B3D10049C031 /* PhoneCodesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE6012904B3D10049C031 /* PhoneCodesPresenter.swift */; };
+		233AE6042904B3DE0049C031 /* PhoneCodesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE6032904B3DE0049C031 /* PhoneCodesInteractor.swift */; };
+		233AE6062904B3FA0049C031 /* PhoneCodesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE6052904B3FA0049C031 /* PhoneCodesConfigurator.swift */; };
+		233AE6092905F1550049C031 /* PhoneCodesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AE6082905F1550049C031 /* PhoneCodesInfo.swift */; };
+		2391D3082907525200521C78 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2391D3072907525200521C78 /* DataManager.swift */; };
+		2391D30A2908BA8400521C78 /* PhoneCodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2391D3092908BA8400521C78 /* PhoneCodesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		233AE5C72901ED040049C031 /* Offline Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		233AE5CA2901ED040049C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		233AE5CC2901ED040049C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		233AE5CE2901ED040049C031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		233AE5CE2901ED040049C031 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		233AE5D32901ED0C0049C031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		233AE5D62901ED0C0049C031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		233AE5D82901ED0C0049C031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		233AE5E72901ED0C0049C031 /* Offline InfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Offline InfoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		233AE5EB2901ED0C0049C031 /* Offline_InfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline_InfoUITests.swift; sourceTree = "<group>"; };
 		233AE5ED2901ED0C0049C031 /* Offline_InfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline_InfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		233AE5FE2904B35F0049C031 /* PhoneCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesViewController.swift; sourceTree = "<group>"; };
+		233AE6012904B3D10049C031 /* PhoneCodesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesPresenter.swift; sourceTree = "<group>"; };
+		233AE6032904B3DE0049C031 /* PhoneCodesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesInteractor.swift; sourceTree = "<group>"; };
+		233AE6052904B3FA0049C031 /* PhoneCodesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesConfigurator.swift; sourceTree = "<group>"; };
+		233AE6082905F1550049C031 /* PhoneCodesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesInfo.swift; sourceTree = "<group>"; };
+		2391D3072907525200521C78 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2391D3092908BA8400521C78 /* PhoneCodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCodesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +111,13 @@
 		233AE5C92901ED040049C031 /* Offline Info */ = {
 			isa = PBXGroup;
 			children = (
-				233AE5CA2901ED040049C031 /* AppDelegate.swift */,
-				233AE5CC2901ED040049C031 /* SceneDelegate.swift */,
-				233AE5CE2901ED040049C031 /* ViewController.swift */,
-				233AE5D32901ED0C0049C031 /* Assets.xcassets */,
-				233AE5D52901ED0C0049C031 /* LaunchScreen.storyboard */,
+				233AE6072904C1D00049C031 /* Models */,
+				233AE5FB2904B0960049C031 /* App */,
+				233AE5FA2904B0870049C031 /* MainViewControllers */,
+				233AE5FD2904B0B70049C031 /* Media */,
+				233AE5FC2904B0A90049C031 /* LaunchScreen */,
 				233AE5D82901ED0C0049C031 /* Info.plist */,
+				233AE6002904B3B60049C031 /* PhoneCodes */,
 			);
 			path = "Offline Info";
 			sourceTree = "<group>";
@@ -122,6 +137,60 @@
 				233AE5ED2901ED0C0049C031 /* Offline_InfoUITestsLaunchTests.swift */,
 			);
 			path = "Offline InfoUITests";
+			sourceTree = "<group>";
+		};
+		233AE5FA2904B0870049C031 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				233AE5CE2901ED040049C031 /* MainViewController.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		233AE5FB2904B0960049C031 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				233AE5CC2901ED040049C031 /* SceneDelegate.swift */,
+				233AE5CA2901ED040049C031 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		233AE5FC2904B0A90049C031 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				233AE5D52901ED0C0049C031 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		233AE5FD2904B0B70049C031 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				233AE5D32901ED0C0049C031 /* Assets.xcassets */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		233AE6002904B3B60049C031 /* PhoneCodes */ = {
+			isa = PBXGroup;
+			children = (
+				233AE5FE2904B35F0049C031 /* PhoneCodesViewController.swift */,
+				2391D3092908BA8400521C78 /* PhoneCodesCell.swift */,
+				233AE6012904B3D10049C031 /* PhoneCodesPresenter.swift */,
+				233AE6032904B3DE0049C031 /* PhoneCodesInteractor.swift */,
+				233AE6052904B3FA0049C031 /* PhoneCodesConfigurator.swift */,
+			);
+			path = PhoneCodes;
+			sourceTree = "<group>";
+		};
+		233AE6072904C1D00049C031 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				233AE6082905F1550049C031 /* PhoneCodesInfo.swift */,
+				2391D3072907525200521C78 /* DataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				233AE5CF2901ED040049C031 /* ViewController.swift in Sources */,
+				233AE5FF2904B35F0049C031 /* PhoneCodesViewController.swift in Sources */,
+				233AE5CF2901ED040049C031 /* MainViewController.swift in Sources */,
+				233AE6022904B3D10049C031 /* PhoneCodesPresenter.swift in Sources */,
+				233AE6092905F1550049C031 /* PhoneCodesInfo.swift in Sources */,
 				233AE5CB2901ED040049C031 /* AppDelegate.swift in Sources */,
+				233AE6062904B3FA0049C031 /* PhoneCodesConfigurator.swift in Sources */,
+				233AE6042904B3DE0049C031 /* PhoneCodesInteractor.swift in Sources */,
+				2391D30A2908BA8400521C78 /* PhoneCodesCell.swift in Sources */,
+				2391D3082907525200521C78 /* DataManager.swift in Sources */,
 				233AE5CD2901ED040049C031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

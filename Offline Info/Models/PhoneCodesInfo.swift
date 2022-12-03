@@ -7,11 +7,17 @@
 
 import Foundation
 
-struct PhoneCodesInfo {
+class PhoneCodesInfo {
     
     let sectionName: String
     let sectionObject: [String: String]
     var isOpened: Bool = false
+    
+    init(sectionName: String, sectionObject: [String: String], isOpened: Bool = false) {
+        self.sectionName = sectionName
+        self.sectionObject = sectionObject
+        self.isOpened = isOpened
+    }
     
 }
 
